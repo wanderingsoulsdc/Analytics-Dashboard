@@ -1,0 +1,39 @@
+/* 背景粒子层 */
+.particles-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 大屏主容器层级 */
+.dashboard-layout {
+  position: relative;
+  z-index: 1;
+}
+
+/* 左右栏的 motion 包装 div 需要纵向填充 */
+.dashboard-left > div,
+.dashboard-right > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 让 Panel 在 motion.div 中正确撑满高度 */
+.dashboard-left > div > .panel-container,
+.dashboard-right > div > .panel-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Panel 内容区自适应剩余空间 */
+.dashboard-left > div > .panel-container > .panel-content,
+.dashboard-right > div > .panel-container > .panel-content {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}

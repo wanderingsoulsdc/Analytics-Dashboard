@@ -1,0 +1,13 @@
+.number-flip {
+  font-weight: bold;
+  font-variant-numeric: tabular-nums;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.number-suffix {
+  font-size: 0.5em;
+  font-weight: normal;
+  margin-left: 2px;
+  opacity: 0.7;
+}
